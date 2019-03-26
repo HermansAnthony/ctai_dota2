@@ -1,0 +1,2 @@
+model_checkpoint_path: "Pendulumv0_1M_trpo"
+all_model_checkpoint_paths: "Pendulumv0_1M_trpo"

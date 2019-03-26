@@ -1,0 +1,21 @@
+#!/bin/bash
+
+OPENAI_LOG_FORMAT=csv OPENAI_LOGDIR=logs/MountainCarv0/ppo python -m baselines.run --alg=ppo2 --env=MountainCar-v0 --num_timesteps=1e3 --save_path=./models/MountainCarv0_10M_ppo2
+OPENAI_LOG_FORMAT=csv OPENAI_LOGDIR=logs/MountainCarv0/trpo python -m baselines.run --alg=trpo_mpi --env=MountainCar-v0 --num_timesteps=1e3 --save_path=./models/MountainCarv0_10M_trpo
+OPENAI_LOG_FORMAT=csv OPENAI_LOGDIR=logs/MountainCarv0/deepq python -m baselines.run --alg=deepq --env=MountainCar-v0 --num_timesteps=1e3 --save_path=./models/MountainCarv0_10M_deepq
+
+OPENAI_LOG_FORMAT=csv OPENAI_LOGDIR=logs/CartPolev1/ppo python -m baselines.run --alg=ppo2 --env=CartPole-v1 --num_timesteps=1e3 --save_path=./models/CartPolev1_10M_ppo2
+OPENAI_LOG_FORMAT=csv OPENAI_LOGDIR=logs/CartPolev1/trpo python -m baselines.run --alg=trpo_mpi --env=CartPole-v1 --num_timesteps=1e3 --save_path=./models/CartPolev1_10M_trpo
+OPENAI_LOG_FORMAT=csv OPENAI_LOGDIR=logs/CartPolev1/deepq python -m baselines.run --alg=deepq --env=CartPole-v1 --num_timesteps=1e3 --save_path=./models/CartPolev1_10M_deepq
+
+OPENAI_LOG_FORMAT=csv OPENAI_LOGDIR=logs/Acrobotv1/ppo python -m baselines.run --alg=ppo2 --env=Acrobot-v1 --num_timesteps=1e3 --save_path=./models/Acrobotv1_10M_ppo2
+OPENAI_LOG_FORMAT=csv OPENAI_LOGDIR=logs/Acrobotv1/trpo python -m baselines.run --alg=trpo_mpi --env=Acrobot-v1 --num_timesteps=1e3 --save_path=./models/Acrobotv1_10M_trpo
+OPENAI_LOG_FORMAT=csv OPENAI_LOGDIR=logs/Acrobotv1/deepq python -m baselines.run --alg=deepq --env=Acrobot-v1 --num_timesteps=1e3 --save_path=./models/Acrobotv1_10M_deepq
+
+OPENAI_LOG_FORMAT=csv OPENAI_LOGDIR=logs/MountainCarContinuousv0/ppo2 python -m baselines.run --alg=ppo2 --env=MountainCarContinuous-v0 --num_timesteps=1e3 --save_path=./models/MountainCarContinuousv0_10M_ppo2
+OPENAI_LOG_FORMAT=csv OPENAI_LOGDIR=logs/MountainCarContinuousv0/trpo python -m baselines.run --alg=trpo_mpi --env=MountainCarContinuous-v0 --num_timesteps=1e3 --save_path=./models/MountainCarContinuousv0_10M_trpo
+#OPENAI_LOG_FORMAT=csv OPENAI_LOGDIR=~./logs/MountainCarContinuousv0_10M_deepq python -m baselines.run --alg=deepq --env=MountainCarContinuous-v0 --num_timesteps=1e3 --save_path=./models/MountainCarContinuousv0_10M_deepq
+
+OPENAI_LOG_FORMAT=csv OPENAI_LOGDIR=logs/Pendulumv0/ppo python -m baselines.run --alg=ppo2 --env=Pendulum-v0 --num_timesteps=1e3 --save_path=./models/Pendulumv0_10M_ppo2
+OPENAI_LOG_FORMAT=csv OPENAI_LOGDIR=logs/Pendulumv0/trpo python -m baselines.run --alg=trpo_mpi --env=Pendulum-v0 --num_timesteps=1e3 --save_path=./models/Pendulumv0_10M_trpo
+#OPENAI_LOG_FORMAT=csv OPENAI_LOGDIR=logs/Pendulumv0/deepq python -m baselines.run --alg=deepq --env=Pendulum-v0 --num_timesteps=1e3 --save_path=./models/Pendulumv0_10M_deepq

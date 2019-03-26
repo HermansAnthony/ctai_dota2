@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/anthonyh/models/pong_1M_trpo_mpi"
+all_model_checkpoint_paths: "/home/anthonyh/models/pong_1M_trpo_mpi"

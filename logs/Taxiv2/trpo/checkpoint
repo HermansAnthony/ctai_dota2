@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/anthonyh/models/taxi_trpo_1M"
+all_model_checkpoint_paths: "/home/anthonyh/models/taxi_trpo_1M"
